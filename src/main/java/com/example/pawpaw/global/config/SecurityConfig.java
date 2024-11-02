@@ -29,7 +29,8 @@ public class SecurityConfig {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
                 .requestMatchers(
-                        "/login", "/logout", "/api/user/login", "/api/user/refresh"
+                        "/login", "/logout", "/api/user/login", "/api/user/refresh",
+                        "/v3/api-docs/**", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**"
                 );
     }
 
