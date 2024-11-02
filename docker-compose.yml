@@ -4,6 +4,8 @@ services:
     image: "leejongsuu1/pawpaw-api:latest"
     ports:
       - "8080:8080"
+    depends_on:
+      - redis
     logging:
       driver: json-file
       options:
@@ -26,13 +28,13 @@ services:
         max-size: "100m"
         max-file: "3"
 
-#  redis:
-#    container_name: quick-link-redis
-#    image: "redis:latest"
-#    ports:
-#      - "6379:6379"
-#    logging:
-#      driver: json-file
-#      options:
-#        max-size: "100m"
-#        max-file: "3"
+  redis:
+    container_name: pawpaw-redis
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    logging:
+      driver: json-file
+      options:
+        max-size: "100m"
+        max-file: "3"
