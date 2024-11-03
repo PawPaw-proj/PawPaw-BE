@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.user.dto;
+package com.example.pawpaw.domain.auth.dto;
 
 public record LoginRequestDTO(String address) {
 }

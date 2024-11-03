@@ -1,28 +1,28 @@
-package com.example.pawpaw.domain.user.controller;
+package com.example.pawpaw.domain.auth.controller;
 
-import com.example.pawpaw.domain.user.dto.LoginRequestDTO;
-import com.example.pawpaw.domain.user.dto.TokenResponseDTO;
-import com.example.pawpaw.domain.user.service.UserService;
+import com.example.pawpaw.domain.auth.dto.LoginRequestDTO;
+import com.example.pawpaw.domain.auth.dto.TokenResponseDTO;
+import com.example.pawpaw.domain.auth.service.AuthService;
 import com.example.pawpaw.global.response.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/auth")
 @RequiredArgsConstructor
-public class UserController {
+public class AuthController {
 
-    private final UserService userService;
+    private final AuthService authService;
 
     @PostMapping("/login")
     public Response<TokenResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO) {
-        TokenResponseDTO tokenResponseDTO = userService.login(loginRequestDTO);
+        TokenResponseDTO tokenResponseDTO = authService.login(loginRequestDTO);
         return Response.success(tokenResponseDTO);
     }
 
     @GetMapping("/refresh")
     public Response<TokenResponseDTO> refresh(@RequestHeader("refreshToken") String refreshToken) {
-        TokenResponseDTO tokenResponseDTO = userService.refresh(refreshToken);
+        TokenResponseDTO tokenResponseDTO = authService.refresh(refreshToken);
         return Response.success(tokenResponseDTO);
     }
 }

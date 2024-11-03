@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.user.dto;
+package com.example.pawpaw.domain.auth.dto;
 
 import com.example.pawpaw.global.token.Token;
 import lombok.Builder;

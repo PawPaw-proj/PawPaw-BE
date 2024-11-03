@@ -1,7 +1,7 @@
-package com.example.pawpaw.domain.user.service;
+package com.example.pawpaw.domain.auth.service;
 
-import com.example.pawpaw.domain.user.dto.LoginRequestDTO;
-import com.example.pawpaw.domain.user.dto.TokenResponseDTO;
+import com.example.pawpaw.domain.auth.dto.LoginRequestDTO;
+import com.example.pawpaw.domain.auth.dto.TokenResponseDTO;
 import com.example.pawpaw.domain.user.entity.User;
 import com.example.pawpaw.domain.user.repository.UserRepository;
 import com.example.pawpaw.global.response.CustomException;
@@ -19,7 +19,7 @@ import static com.example.pawpaw.global.response.ErrorCode.INVALID_REFRESH_TOKEN
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
-public class UserServiceImpl implements UserService {
+public class AuthServiceImpl implements AuthService {
 
     private final UserRepository userRepository;
     private final JwtTokenUtils jwtTokenUtils;

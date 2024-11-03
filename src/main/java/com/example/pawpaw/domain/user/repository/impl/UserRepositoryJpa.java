@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.user.repository;
+package com.example.pawpaw.domain.user.repository.impl;
 
 import com.example.pawpaw.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
