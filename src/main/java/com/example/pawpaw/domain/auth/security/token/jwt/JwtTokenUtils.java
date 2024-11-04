@@ -1,21 +1,18 @@
-package com.example.pawpaw.domain.auth.token.jwt;
+package com.example.pawpaw.domain.auth.security.token.jwt;
 
-import com.example.pawpaw.domain.auth.token.Token;
+import com.example.pawpaw.domain.auth.security.details.CustomUserDetails;
+import com.example.pawpaw.domain.auth.security.details.CustomUserDetailsService;
+import com.example.pawpaw.domain.auth.security.token.Token;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Component
@@ -23,10 +20,12 @@ public class JwtTokenUtils {
 
     private final Key key;
     private final long expirationTimeInMillis = 1000 * 60 * 60 * 1; // 2시간
+    private final CustomUserDetailsService customUserDetailsService;
 
-    public JwtTokenUtils(@Value("${jwt.secret}") String secretKey) {
+    public JwtTokenUtils(@Value("${jwt.secret}") String secretKey, CustomUserDetailsService customUserDetailsService) {
         byte[] keyBytes = secretKey.getBytes();
         this.key = Keys.hmacShaKeyFor(keyBytes);
+        this.customUserDetailsService = customUserDetailsService;
     }
 
     public Token generateAccessToken(Integer user_id) {
@@ -54,11 +53,8 @@ public class JwtTokenUtils {
 
     public Authentication getAuthentication(String accessToken) {
         Claims claims = parseClaims(accessToken);
-        List<SimpleGrantedAuthority> authorities = Arrays.stream(claims.get("auth").toString().split(","))
-                .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
-        User principal = new User(claims.getSubject(), "", authorities);
-        return new UsernamePasswordAuthenticationToken(principal, "", authorities);
+        CustomUserDetails userDetails = (CustomUserDetails) customUserDetailsService.loadUserByUsername(claims.getSubject());
+        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
     private Claims parseClaims(String token) {
