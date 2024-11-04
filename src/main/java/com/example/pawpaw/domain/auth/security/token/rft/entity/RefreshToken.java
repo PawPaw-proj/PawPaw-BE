@@ -1,4 +1,4 @@
-package com.example.pawpaw.global.token.rft.entity;
+package com.example.pawpaw.domain.auth.token.rft.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

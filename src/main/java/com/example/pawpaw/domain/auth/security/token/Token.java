@@ -1,4 +1,4 @@
-package com.example.pawpaw.global.token;
+package com.example.pawpaw.domain.auth.token;
 
 import java.util.Date;
 

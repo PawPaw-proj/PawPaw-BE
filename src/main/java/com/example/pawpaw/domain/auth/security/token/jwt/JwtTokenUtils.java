@@ -1,6 +1,6 @@
-package com.example.pawpaw.global.token.jwt;
+package com.example.pawpaw.domain.auth.token.jwt;
 
-import com.example.pawpaw.global.token.Token;
+import com.example.pawpaw.domain.auth.token.Token;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;

@@ -1,11 +1,11 @@
 package com.example.pawpaw.domain.user.entity;
 
 import com.example.pawpaw.global.base.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,5 +18,8 @@ public class User extends BaseEntity {
     private Integer id;
 
     private String address;
+
+    @OneToMany(mappedBy = "parent")
+    private List<ParentChild> children = new ArrayList<>();
 }
 
