@@ -75,7 +75,8 @@ public class ChildServiceImpl implements ChildService {
             throw new CustomException(ErrorCode.BAD_REQUEST_CHILD);
         }
         Child child = childRepository.findById(childId);
-        Child updatedChild = child.update(updateChildDTO.name(), updateChildDTO.birthDate(), updateChildDTO.height(), updateChildDTO.weight());
+        Child updatedChild = child.update(updateChildDTO.name(), updateChildDTO.birthDate(),
+                updateChildDTO.height(), updateChildDTO.weight(), updateChildDTO.profile());
         return ChildDTO.of(updatedChild);
     }
 

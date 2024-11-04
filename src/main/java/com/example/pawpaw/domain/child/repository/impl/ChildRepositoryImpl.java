@@ -26,7 +26,7 @@ public class ChildRepositoryImpl implements ChildRepository {
 
     @Override
     public Child findByAddress(String address) {
-        return childRepositoryJpa.findOptionalByAddress(address).orElseThrow(() -> new CustomException(NOT_FOUND_CHILD));
+        return childRepositoryJpa.findOptionalByAddress(address).orElseThrow(() -> new CustomException(NOT_FOUND_CHILD, "존재하지 않는 자식 주소입니다."));
     }
 
     @Override
