@@ -1,6 +1,6 @@
 package com.example.pawpaw.domain.auth.dto;
 
-import com.example.pawpaw.global.token.Token;
+import com.example.pawpaw.domain.auth.security.token.Token;
 import lombok.Builder;
 
 import java.util.Date;

@@ -1,6 +1,6 @@
-package com.example.pawpaw.domain.user.repository;
+package com.example.pawpaw.domain.auth.repository;
 
-import com.example.pawpaw.domain.user.entity.User;
+import com.example.pawpaw.domain.auth.entity.User;
 
 import java.util.Optional;
 

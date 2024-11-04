@@ -1,9 +1,9 @@
-package com.example.pawpaw.domain.auth.token.rft.service;
+package com.example.pawpaw.domain.auth.security.token.rft.service;
 
 
-import com.example.pawpaw.domain.auth.token.Token;
-import com.example.pawpaw.domain.auth.token.rft.entity.RefreshToken;
-import com.example.pawpaw.domain.auth.token.rft.repository.RefreshTokenRepository;
+import com.example.pawpaw.domain.auth.security.token.Token;
+import com.example.pawpaw.domain.auth.security.token.rft.entity.RefreshToken;
+import com.example.pawpaw.domain.auth.security.token.rft.repository.RefreshTokenRepository;
 import com.example.pawpaw.global.response.CustomException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

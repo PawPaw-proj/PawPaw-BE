@@ -1,6 +1,6 @@
-package com.example.pawpaw.domain.user.repository.impl;
+package com.example.pawpaw.domain.auth.repository.impl;
 
-import com.example.pawpaw.domain.user.entity.User;
+import com.example.pawpaw.domain.auth.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

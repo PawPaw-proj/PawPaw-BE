@@ -1,7 +1,7 @@
-package com.example.pawpaw.domain.user.repository.impl;
+package com.example.pawpaw.domain.auth.repository.impl;
 
-import com.example.pawpaw.domain.user.entity.User;
-import com.example.pawpaw.domain.user.repository.UserRepository;
+import com.example.pawpaw.domain.auth.entity.User;
+import com.example.pawpaw.domain.auth.repository.UserRepository;
 import com.example.pawpaw.global.response.CustomException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

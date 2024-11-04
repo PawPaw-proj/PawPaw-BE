@@ -1,5 +1,6 @@
-package com.example.pawpaw.domain.user.entity;
+package com.example.pawpaw.domain.auth.entity;
 
+import com.example.pawpaw.domain.child.entity.ParentChild;
 import com.example.pawpaw.global.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,7 +20,7 @@ public class User extends BaseEntity {
 
     private String address;
 
-    @OneToMany(mappedBy = "parent")
+    @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ParentChild> children = new ArrayList<>();
 }
 

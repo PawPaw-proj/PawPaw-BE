@@ -1,7 +1,7 @@
 package com.example.pawpaw.global.config;
 
-import com.example.pawpaw.global.token.jwt.JwtTokenFilter;
-import com.example.pawpaw.global.token.jwt.JwtTokenUtils;
+import com.example.pawpaw.domain.auth.security.token.jwt.JwtTokenFilter;
+import com.example.pawpaw.domain.auth.security.token.jwt.JwtTokenUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +35,6 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
         http
                 .cors(corsCustomizer -> corsCustomizer
                         .configurationSource(customCorsConfigurationSource))

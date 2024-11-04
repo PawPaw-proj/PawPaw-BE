@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.auth.token.jwt;
+package com.example.pawpaw.domain.auth.security.token.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
