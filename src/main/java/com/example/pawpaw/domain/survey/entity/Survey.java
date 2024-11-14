@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Survey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column(nullable = false)
     private String title;
     @Column(nullable = false)
