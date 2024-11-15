@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,10 @@ public class Child extends BaseEntity {
         this.weight = weight;
         this.profile = profile;
         return this;
+    }
+
+    public int calculateAgeMonths() {
+        return Period.between(birthDate, LocalDate.now()).getYears() * 12 + Period.between(birthDate, LocalDate.now()).getMonths();
     }
 }
 

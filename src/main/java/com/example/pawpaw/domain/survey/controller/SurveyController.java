@@ -1,5 +1,7 @@
 package com.example.pawpaw.domain.survey.controller;
 
+import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
 import com.example.pawpaw.domain.survey.dto.response.SurveyItemResponse;
 import com.example.pawpaw.domain.survey.service.SurveyService;
 import com.example.pawpaw.global.response.Response;
@@ -15,6 +17,16 @@ public class SurveyController {
 
     public SurveyController(SurveyService surveyService) {
         this.surveyService = surveyService;
+    }
+
+    @PostMapping("/children/{childId}/surveys/{surveyId}")
+    public Response<ChildSurveyRegisterResponse> addChildSurvey(
+        @PathVariable int childId,
+        @PathVariable int surveyId,
+        @RequestBody ChildSurveyRegisterRequest request
+    ) {
+        ChildSurveyRegisterResponse response = surveyService.registerSurvey(childId, surveyId, request);
+        return Response.success(response);
     }
 
     @GetMapping("/surveys")
