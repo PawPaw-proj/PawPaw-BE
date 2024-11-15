@@ -81,4 +81,11 @@ public enum Survey {
             .findFirst()
             .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 Survey Id입니다.: " + id));
     }
+
+    public static Survey findById(int id) {
+        return Stream.of(values())
+            .filter(survey -> survey.getId() == id)
+            .findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 Survey Id입니다.: " + id));
+    }
 }
