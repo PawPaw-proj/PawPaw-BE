@@ -58,4 +58,8 @@ public class ChildSurvey {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("해당 카테고리의 검사 내역을 찾을 수 없습니다: " + category));
     }
+
+    public int calculateChildAgeByDays() {
+        return child.calculateAgeDays(surveyDate);
+    }
 }
