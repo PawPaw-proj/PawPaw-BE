@@ -22,14 +22,15 @@ public class Child extends BaseEntity {
     private String address;
     private String name;
     private LocalDate birthDate;
-    private Integer height;
-    private Integer weight;
+    private Double height;
+    private Double weight;
+    private Double headCircumference;
     private String profile;
 
     @OneToMany(mappedBy = "child", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ParentChild> parents = new ArrayList<>();
 
-    public Child update(String name, LocalDate birthDate, Integer height, Integer weight, String profile) {
+    public Child update(String name, LocalDate birthDate, Double height, Double weight, String profile) {
         this.name = name;
         this.birthDate = birthDate;
         this.height = height;
