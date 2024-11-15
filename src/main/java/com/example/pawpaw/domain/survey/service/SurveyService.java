@@ -2,6 +2,7 @@ package com.example.pawpaw.domain.survey.service;
 
 import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
+import com.example.pawpaw.domain.survey.dto.ChildSurveyListResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.request.SurveyCategoryResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
@@ -53,5 +54,11 @@ public class SurveyService {
         }
         ChildSurvey childSurvey = childSurveyRepository.save(new ChildSurvey(child, surveyId, LocalDate.now(), child.calculateAgeMonths(), sections));
         return new ChildSurveyRegisterResponse(childSurvey.getId());
+    }
+
+    public ChildSurveyListResponse getChildSurveys(int childId) {
+        Child child = childRepository.findById(childId);
+        List<ChildSurvey> childSurveys = childSurveyRepository.findByChild(child);
+        return ChildSurveyListResponse.from(child, childSurveys);
     }
 }
