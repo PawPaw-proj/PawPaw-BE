@@ -27,4 +27,10 @@ public class SurveySection {
         this.category = category;
         this.responses = responses;
     }
+
+    public int calculateTotalScore() {
+        return responses.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+    }
 }

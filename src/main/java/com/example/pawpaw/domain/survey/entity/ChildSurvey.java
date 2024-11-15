@@ -44,4 +44,8 @@ public class ChildSurvey {
         this.surveyDate = surveyDate;
         this.surveyAgeMonths = surveyAgeMonths;
     }
+
+    public int calculateChildAgeByDays() {
+        return child.calculateAgeDays(surveyDate);
+    }
 }

@@ -41,5 +41,9 @@ public class Child extends BaseEntity {
     public int calculateAgeMonths() {
         return Period.between(birthDate, LocalDate.now()).getYears() * 12 + Period.between(birthDate, LocalDate.now()).getMonths();
     }
+
+    public int calculateAgeDays(LocalDate date) {
+        return Period.between(birthDate, date).getDays();
+    }
 }
 

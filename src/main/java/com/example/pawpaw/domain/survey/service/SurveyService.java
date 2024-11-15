@@ -3,6 +3,7 @@ package com.example.pawpaw.domain.survey.service;
 import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
 import com.example.pawpaw.domain.survey.dto.ChildSurveyListResponse;
+import com.example.pawpaw.domain.survey.dto.ChildSurveyResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.request.SurveyCategoryResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
@@ -60,5 +61,12 @@ public class SurveyService {
         Child child = childRepository.findById(childId);
         List<ChildSurvey> childSurveys = childSurveyRepository.findByChild(child);
         return ChildSurveyListResponse.from(child, childSurveys);
+    }
+
+    public ChildSurveyResponse getChildSurvey(int childSurveyId) {
+        ChildSurvey childSurvey = childSurveyRepository.findById(childSurveyId)
+            .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 ChildSurvey Id입니다.: " + childSurveyId));
+
+        return ChildSurveyResponse.from(childSurvey);
     }
 }
