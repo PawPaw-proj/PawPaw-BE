@@ -4,6 +4,7 @@ import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
 import com.example.pawpaw.domain.survey.dto.ChildSurveyListResponse;
 import com.example.pawpaw.domain.survey.dto.ChildSurveyResponse;
+import com.example.pawpaw.domain.survey.dto.ChildSurveySectionResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.request.SurveyCategoryResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
@@ -68,5 +69,14 @@ public class SurveyService {
             .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 ChildSurvey Id입니다.: " + childSurveyId));
 
         return ChildSurveyResponse.from(childSurvey);
+    }
+
+    public ChildSurveySectionResponse getChildSurveySection(int childSurveyId, String categoryCode) {
+        ChildSurvey childSurvey = childSurveyRepository.findById(childSurveyId)
+            .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 ChildSurvey Id입니다.: " + childSurveyId));
+        SurveyCategory category = SurveyCategory.fromCode(categoryCode);
+        SurveySection section = childSurvey.findSectionByCategory(category);
+
+        return ChildSurveySectionResponse.from(section);
     }
 }

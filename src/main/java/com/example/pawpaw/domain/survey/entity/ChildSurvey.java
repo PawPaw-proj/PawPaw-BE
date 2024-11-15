@@ -48,4 +48,11 @@ public class ChildSurvey {
     public int calculateChildAgeByDays() {
         return child.calculateAgeDays(surveyDate);
     }
+
+    public SurveySection findSectionByCategory(SurveyCategory category) {
+        return surveySections.stream()
+                .filter(section -> section.getCategory().equals(category))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("해당 카테고리의 검사 내역을 찾을 수 없습니다: " + category));
+    }
 }
