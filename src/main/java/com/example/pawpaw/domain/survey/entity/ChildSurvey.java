@@ -36,6 +36,7 @@ public class ChildSurvey {
     private String evaluationResult = "평가 전";
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "child_survey_id")
     private List<SurveySection> surveySections;
 
     public ChildSurvey(Child child, int surveyId, LocalDate surveyDate, int surveyAgeMonths, List<SurveySection> surveySections) {
