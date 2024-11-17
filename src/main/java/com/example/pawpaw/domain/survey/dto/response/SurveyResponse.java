@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.survey.dto;
+package com.example.pawpaw.domain.survey.dto.response;
 
 import com.example.pawpaw.domain.survey.entity.Survey;
 import com.example.pawpaw.domain.survey.entity.SurveyCategory;
