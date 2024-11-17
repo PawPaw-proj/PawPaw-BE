@@ -1,6 +1,6 @@
 package com.example.pawpaw.domain.survey.dto;
 
-import com.example.pawpaw.domain.survey.repository.questions.Question;
+import com.example.pawpaw.domain.survey.entity.questions.Question;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.survey.repository.questions;
+package com.example.pawpaw.domain.survey.entity.questions;
 
 public record Question(
     int sequence,

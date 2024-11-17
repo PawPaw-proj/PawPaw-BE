@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.survey.repository.questions;
+package com.example.pawpaw.domain.survey.entity.questions;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
