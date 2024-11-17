@@ -2,9 +2,9 @@ package com.example.pawpaw.domain.survey.service;
 
 import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
-import com.example.pawpaw.domain.survey.dto.ChildSurveyListResponse;
-import com.example.pawpaw.domain.survey.dto.ChildSurveyResponse;
-import com.example.pawpaw.domain.survey.dto.ChildSurveySectionResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveyListResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveyResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveySectionResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.request.SurveyCategoryResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;

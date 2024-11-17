@@ -1,4 +1,4 @@
-package com.example.pawpaw.domain.survey.dto;
+package com.example.pawpaw.domain.survey.dto.response;
 
 public record CutoffScoresResponse(
     int low,

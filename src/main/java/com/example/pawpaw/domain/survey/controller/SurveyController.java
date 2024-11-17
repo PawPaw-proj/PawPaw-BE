@@ -1,8 +1,9 @@
 package com.example.pawpaw.domain.survey.controller;
 
-import com.example.pawpaw.domain.survey.dto.ChildSurveyListResponse;
-import com.example.pawpaw.domain.survey.dto.ChildSurveyResponse;
-import com.example.pawpaw.domain.survey.dto.ChildSurveySectionResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveyListResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveyResponse;
+import com.example.pawpaw.domain.survey.dto.response.ChildSurveySectionResponse;
+import com.example.pawpaw.domain.survey.dto.SurveyResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
 import com.example.pawpaw.domain.survey.dto.response.SurveyItemResponse;
