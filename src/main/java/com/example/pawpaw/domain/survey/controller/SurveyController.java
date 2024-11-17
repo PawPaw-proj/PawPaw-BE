@@ -39,6 +39,12 @@ public class SurveyController {
         return Response.success(surveys);
     }
 
+    @GetMapping("/surveys/{surveyId}")
+    public Response<SurveyResponse> getSurveyQuestions(@PathVariable int surveyId) {
+        SurveyResponse survey = surveyService.getSurveyQuestions(surveyId);
+        return Response.success(survey);
+    }
+
     @GetMapping("/children/{childId}/surveys")
     public Response<ChildSurveyListResponse> getChildSurveys(@PathVariable int childId) {
         ChildSurveyListResponse response = surveyService.getChildSurveys(childId);
