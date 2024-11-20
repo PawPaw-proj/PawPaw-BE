@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 public class CustomCorsConfigurationSource implements CorsConfigurationSource {
     private final String ALLOWED_ORIGIN;
-    private final List<String> ALLOWED_METHODS = List.of("POST", "GET", "PATCH", "OPTIONS", "DELETE");
+    private final List<String> ALLOWED_METHODS = List.of("POST", "GET", "PATCH", "PUT", "OPTIONS", "DELETE");
 
     // yml에 프론트의 주소 작성 후 값 주입
     public CustomCorsConfigurationSource(@Value("${url.frontend}") String BASE_URL) {
@@ -22,7 +22,7 @@ public class CustomCorsConfigurationSource implements CorsConfigurationSource {
     @Override
     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Collections.singletonList(ALLOWED_ORIGIN));
+        config.setAllowedOrigins(List.of(ALLOWED_ORIGIN));
         config.setAllowedMethods(ALLOWED_METHODS);
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Collections.singletonList("*"));
