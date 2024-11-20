@@ -28,7 +28,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         Integer id;
         try {
-            id = Integer.parseInt(userId); // userId 변환 시 예외 처리 추가
+            id = Integer.parseInt(userId);
         } catch (NumberFormatException e) {
             throw new CustomException(BAD_REQUEST_RESOURCE, "userId 형식이 맞지 않습니다.");
         }
