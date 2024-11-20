@@ -26,7 +26,6 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 public class SecurityConfig {
 
     private final JwtTokenUtils jwtTokenUtils;
-    private final CustomCorsConfigurationSource customCorsConfigurationSource;
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
