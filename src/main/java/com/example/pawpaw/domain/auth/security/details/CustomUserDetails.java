@@ -8,11 +8,6 @@ import java.util.List;
 
 public record CustomUserDetails(Integer userId, List<Integer> childIds) implements UserDetails {
 
-    public CustomUserDetails(Integer userId, List<Integer> childIds) {
-        this.userId = userId;
-        this.childIds = childIds;
-    }
-
     @Override
     public String getUsername() {
         return String.valueOf(userId);
