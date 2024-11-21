@@ -14,6 +14,11 @@ public class AuthController {
 
     private final AuthService authService;
 
+    @GetMapping("/test")
+    public Response<Void> hello() {
+        return Response.success();
+    }
+
     @PostMapping("/login")
     public Response<TokenResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO) {
         TokenResponseDTO tokenResponseDTO = authService.login(loginRequestDTO);

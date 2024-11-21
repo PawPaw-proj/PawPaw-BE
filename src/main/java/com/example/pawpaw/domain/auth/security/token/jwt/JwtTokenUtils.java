@@ -19,7 +19,7 @@ import java.util.Date;
 public class JwtTokenUtils {
 
     private final Key key;
-    private final long expirationTimeInMillis = 1000 * 60 * 60 * 1; // 2시간
+    private final long expirationTimeInMillis = 1000 * 60 * 60 * 24 * 2; // 2일
     private final CustomUserDetailsService customUserDetailsService;
 
     public JwtTokenUtils(@Value("${jwt.secret}") String secretKey, CustomUserDetailsService customUserDetailsService) {
