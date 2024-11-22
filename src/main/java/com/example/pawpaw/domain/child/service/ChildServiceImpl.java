@@ -35,6 +35,7 @@ public class ChildServiceImpl implements ChildService {
                 .birthDate(createChildDTO.birthDate())
                 .height(createChildDTO.height())
                 .weight(createChildDTO.weight())
+                .headCircumference(createChildDTO.headCircumference())
                 .build());
 
         parentChildRepository.save(ParentChild.of(parent, child));
@@ -76,7 +77,7 @@ public class ChildServiceImpl implements ChildService {
         }
         Child child = childRepository.findById(childId);
         Child updatedChild = child.update(updateChildDTO.name(), updateChildDTO.birthDate(),
-                updateChildDTO.height(), updateChildDTO.weight(), updateChildDTO.profile());
+                updateChildDTO.height(), updateChildDTO.weight(), updateChildDTO.profile(), updateChildDTO.headCircumference());
         return ChildDTO.of(updatedChild);
     }
 
