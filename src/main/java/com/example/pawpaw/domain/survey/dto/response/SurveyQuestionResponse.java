@@ -9,13 +9,5 @@ public record SurveyQuestionResponse(
     String question,
     String imageUrl
 ) {
-    public static List<SurveyQuestionResponse> from(List<Question> questions) {
-        return questions.stream()
-            .map(question -> new SurveyQuestionResponse(
-                question.sequence(),
-                question.question(),
-                question.imageUrl()
-            ))
-            .toList();
-    }
+
 }

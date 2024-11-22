@@ -7,7 +7,6 @@ import com.example.pawpaw.domain.survey.dto.response.ChildSurveyListResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveySectionResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
-import com.example.pawpaw.domain.survey.dto.request.SurveyCategoryResponse;
 import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
 import com.example.pawpaw.domain.survey.dto.response.SurveyItemResponse;
 import com.example.pawpaw.domain.survey.entity.ChildSurvey;
@@ -48,13 +47,21 @@ public class SurveyService {
     public ChildSurveyRegisterResponse registerSurvey(int childId, int surveyId, ChildSurveyRegisterRequest request) {
         Child child = childRepository.findById(childId);
         List<SurveySection> sections = new ArrayList<>();
-        for (SurveyCategoryResponse data : request.data()) {
+        List<Integer> surveyResponses = request.surveyResponses();
+        for (int categoryIdx = 0; categoryIdx < 5; categoryIdx++) {
+            SurveyCategory category = SurveyCategory.values()[categoryIdx];
+            List<Integer> categoryResponses = new ArrayList<>();
+            for (int seq = 1; seq <= 8; seq++) {
+                int sequence = categoryIdx * 8 + seq;
+                categoryResponses.add(surveyResponses.get(sequence - 1));
+            }
             SurveySection surveySection = surveySectionRepository.save(new SurveySection(
-                SurveyCategory.from(data.category()),
-                data.surveyResponses())
-            );
+                category,
+                categoryResponses
+            ));
             sections.add(surveySection);
         }
+
         ChildSurvey childSurvey = childSurveyRepository.save(new ChildSurvey(child, surveyId, LocalDate.now(), child.calculateAgeMonths(), sections));
         return new ChildSurveyRegisterResponse(childSurvey.getId());
     }

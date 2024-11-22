@@ -6,7 +6,7 @@ import com.example.pawpaw.global.util.DateUtils;
 import java.time.LocalDate;
 
 public record ChildDTO(Integer id, String address, String name, LocalDate birthDate,
-                       Integer height, Integer weight, Integer months, String profile) {
+                       double height, double weight, Integer months, String profile) {
 
     public static ChildDTO of(Child child) {
         return new ChildDTO(
