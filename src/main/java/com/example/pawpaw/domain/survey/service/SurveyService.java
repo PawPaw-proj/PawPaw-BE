@@ -1,20 +1,18 @@
 package com.example.pawpaw.domain.survey.service;
 
+import com.example.pawpaw.domain.auth.service.AuthService;
 import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
-import com.example.pawpaw.domain.survey.dto.response.SurveyResponse;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyListResponse;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyResponse;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveySectionResponse;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
-import com.example.pawpaw.domain.survey.dto.response.SurveyItemResponse;
+import com.example.pawpaw.domain.survey.dto.response.*;
 import com.example.pawpaw.domain.survey.entity.ChildSurvey;
 import com.example.pawpaw.domain.survey.entity.Survey;
 import com.example.pawpaw.domain.survey.entity.SurveyCategory;
 import com.example.pawpaw.domain.survey.entity.SurveySection;
 import com.example.pawpaw.domain.survey.repository.ChildSurveyRepository;
 import com.example.pawpaw.domain.survey.repository.SurveySectionRepository;
+import com.example.pawpaw.global.response.CustomException;
+import com.example.pawpaw.global.response.ErrorCode;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -32,6 +30,7 @@ public class SurveyService {
     private final ChildRepository childRepository;
     private final ChildSurveyRepository childSurveyRepository;
     private final SurveySectionRepository surveySectionRepository;
+    private final AuthService authService;
 
     public List<SurveyItemResponse> getSurveys() {
         return Stream.of(Survey.values())
@@ -45,6 +44,9 @@ public class SurveyService {
     }
 
     public ChildSurveyRegisterResponse registerSurvey(int childId, int surveyId, ChildSurveyRegisterRequest request) {
+        if (!authService.isParentOfChild(childId)) {
+            throw new CustomException(ErrorCode.BAD_REQUEST_CHILD);
+        }
         Child child = childRepository.findById(childId);
         List<SurveySection> sections = new ArrayList<>();
         List<Integer> surveyResponses = request.surveyResponses();
@@ -67,6 +69,9 @@ public class SurveyService {
     }
 
     public ChildSurveyListResponse getChildSurveys(int childId) {
+        if (!authService.isParentOfChild(childId)) {
+            throw new CustomException(ErrorCode.BAD_REQUEST_CHILD);
+        }
         Child child = childRepository.findById(childId);
         List<ChildSurvey> childSurveys = childSurveyRepository.findByChild(child);
         return ChildSurveyListResponse.from(child, childSurveys);
@@ -76,12 +81,20 @@ public class SurveyService {
         ChildSurvey childSurvey = childSurveyRepository.findById(childSurveyId)
             .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 ChildSurvey Id입니다.: " + childSurveyId));
 
+        if (!authService.isParentOfChild(childSurvey.getChild().getId())) {
+            throw new CustomException(ErrorCode.BAD_REQUEST_CHILD);
+        }
+
         return ChildSurveyResponse.from(childSurvey);
     }
 
     public ChildSurveySectionResponse getChildSurveySection(int childSurveyId, String categoryCode) {
         ChildSurvey childSurvey = childSurveyRepository.findById(childSurveyId)
             .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 ChildSurvey Id입니다.: " + childSurveyId));
+        if (!authService.isParentOfChild(childSurvey.getChild().getId())) {
+            throw new CustomException(ErrorCode.BAD_REQUEST_CHILD);
+        }
+
         SurveyCategory category = SurveyCategory.fromCode(categoryCode);
         SurveySection section = childSurvey.findSectionByCategory(category);
 
