@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -37,13 +38,14 @@ public class ChildSurvey {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "child_survey_id")
-    private List<SurveySection> surveySections;
+    private List<SurveySection> surveySections = new ArrayList<>();
 
     public ChildSurvey(Child child, int surveyId, LocalDate surveyDate, int surveyAgeMonths, List<SurveySection> surveySections) {
         this.child = child;
         this.surveyId = surveyId;
         this.surveyDate = surveyDate;
         this.surveyAgeMonths = surveyAgeMonths;
+        this.surveySections = surveySections;
     }
 
     public int calculateChildAgeByDays() {

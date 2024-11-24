@@ -57,10 +57,10 @@ public class SurveyService {
                 int sequence = categoryIdx * 8 + seq;
                 categoryResponses.add(surveyResponses.get(sequence - 1));
             }
-            SurveySection surveySection = surveySectionRepository.save(new SurveySection(
-                category,
-                categoryResponses
-            ));
+            SurveySection surveySection = new SurveySection(
+                    category,
+                    categoryResponses
+            );
             sections.add(surveySection);
         }
 
