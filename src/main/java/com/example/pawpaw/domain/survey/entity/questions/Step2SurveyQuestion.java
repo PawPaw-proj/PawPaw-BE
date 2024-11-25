@@ -13,12 +13,12 @@ public enum Step2SurveyQuestion {
     GROSS_MOTOR_SKILLS(List.of(
             new Question(1, "엎드린 자세에서 뒤집는다.", null),
             new Question(2, "등을 대고 누운 자세에서 엎드린 자세로 뒤집는다(팔이 몸통에 걸려 있지 않아야 한다).", null),
-            new Question(3, "누워 있을 때 자기 발을 잡고 논다.", null),
-            new Question(4, "앉혀주면 양손을 짚고 30초 이상 혼자 버티고 앉아 있다.", null),
-            new Question(5, "배를 바닥에 대고 앞으로 긴다(배밀이). 이미 네 발기기를 잘 하면 '잘 할 수 있다'로 표기하세요.", null),
-            new Question(6, "앉혀주면 손을 짚지 않고 안정하게 앉아 있다.", null),
+            new Question(3, "누워 있을 때 자기 발을 잡고 논다.", "https://i.ibb.co/pxtWpDM/image-14.png"),
+            new Question(4, "앉혀주면 양손을 짚고 30초 이상 혼자 버티고 앉아 있다.", "https://i.ibb.co/BsC9VHr/image-15.png"),
+            new Question(5, "배를 바닥에 대고 앞으로 긴다(배밀이). 이미 네 발기기를 잘 하면 '잘 할 수 있다'로 표기하세요.", "https://i.ibb.co/pb1J9LX/image-21.png"),
+            new Question(6, "앉혀주면 손을 짚지 않고 안정하게 앉아 있다.", "https://i.ibb.co/b6cygYY/image-18.png"),
             new Question(7, "누워 있다가 혼자 앉는다.", null),
-            new Question(8, "양손과 무릎으로 긴다(네발기기).", null)
+            new Question(8, "양손과 무릎으로 긴다(네발기기).", "https://i.ibb.co/7zD2cCn/image-19.png")
     )),
 
     // 소근육운동
@@ -26,11 +26,11 @@ public enum Step2SurveyQuestion {
             new Question(1, "앉은 자세로 안겨있을 때 양손을 모아 쥐거나 손가락을 만진다.", null),
             new Question(2, "장난감을 손에 쥐어 주면 흔든다.", null),
             new Question(3, "앉은 자세로 안겨있을 때 탁자 위의 장난감을 향해 손을 뻗는다(장난감이 실제로 손에 닿지 않아도 된다).", null),
-            new Question(4, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 감싸 쥔다.", null),
+            new Question(4, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 감싸 쥔다.", "https://i.ibb.co/PhH3tbQ/image-17.png"),
             new Question(5, "딸랑이를 쥐고 있는 손에 다른 장난감을 주면 쥐고 있던 딸랑이를 떨어뜨리고 새 장난감을 잡는다.", null),
             new Question(6, "손을 뻗어 앞에 있는 물체를 잡는다.", null),
             new Question(7, "두 개의 물건을 양손에 각각 따로 쥔다.", null),
-            new Question(8, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", null)
+            new Question(8, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", "https://i.ibb.co/VVG6rFB/image-22.png")
     )),
 
     // 인지

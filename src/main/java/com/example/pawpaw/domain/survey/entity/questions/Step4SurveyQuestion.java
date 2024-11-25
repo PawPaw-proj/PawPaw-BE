@@ -10,11 +10,11 @@ import java.util.List;
 public enum Step4SurveyQuestion {
 
     GROSS_MOTOR_SKILLS(List.of(
-            new Question(1, "누워 있다가 혼자 앉는다.", null),
+            new Question(1, "누워 있다가 혼자 앉는다.", "https://i.ibb.co/7zD2cCn/image-19.png"),
             new Question(2, "양손과 무릎으로 긴다 (네발기기).", null),
             new Question(3, "가구를 붙잡고 일어선다.", null),
-            new Question(4, "가구를 붙잡은 상태에서 넘어지지 않고 자세를 낮춘다.", null),
-            new Question(5, "가구를 양손으로 붙잡고 옆으로 걷는다.", null),
+            new Question(4, "가구를 붙잡은 상태에서 넘어지지 않고 자세를 낮춘다.", "https://i.ibb.co/M5wvy7D/image-23.png"),
+            new Question(5, "가구를 양손으로 붙잡고 옆으로 걷는다.", "https://i.ibb.co/yP0ZZgn/image-24.png"),
             new Question(6, "가구나 벽에 손을 대고 5초 이상 혼자 서 있다.", null),
             new Question(7, "한 손으로 가구를 붙잡고 걷는다.", null),
             new Question(8, "아무것도 붙잡지 않고 혼자서 일어선다.", null)
@@ -23,11 +23,11 @@ public enum Step4SurveyQuestion {
     FINE_MOTOR_SKILLS(List.of(
             new Question(1, "딸랑이를 쥐고 있는 손에 다른 장난감을 주며 쥐고 있던 딸랑이를 떨어뜨리고 새 장난감을 잡는다.", null),
             new Question(2, "두 개의 물건을 양손에 각각 따로 든다.", null),
-            new Question(3, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", null),
+            new Question(3, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", "https://i.ibb.co/VVG6rFB/image-22.png"),
             new Question(4, "장난감을 한 손에서 다른 손으로 옮겨 든다.", null),
             new Question(5, "손잡이를 사용하여 컵을 잡는다.", null),
             new Question(6, "우유병을 혼자서 잡고 먹는다.", null),
-            new Question(7, "엄지손가락과 집게손가락 끝을 '집기 모양'처럼 만들어 작은 알약 크기의 과자를 집는다.", null),
+            new Question(7, "엄지손가락과 집게손가락 끝을 '집기 모양'처럼 만들어 작은 알약 크기의 과자를 집는다.", "https://i.ibb.co/pbDrXtw/image-25.png"),
             new Question(8, "비커가 달린 장난감을 잡고 앞으로 굴러가도록 민다.", null)
     )),
 

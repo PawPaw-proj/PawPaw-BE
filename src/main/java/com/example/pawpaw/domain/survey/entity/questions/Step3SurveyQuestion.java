@@ -9,21 +9,21 @@ import java.util.List;
 @RequiredArgsConstructor
 public enum Step3SurveyQuestion {
     GROSS_MOTOR_SKILLS(List.of(
-            new Question(1, "배를 바닥에 대고 앞으로 기어간다(배밀이). 이미 네 발기기를 잘 하면 '잘 할 수 있다'로 표시하세요.", null),
-            new Question(2, "앉혀주면 손을 짚지 않고 안정하게 앉아 있는다.", null),
+            new Question(1, "배를 바닥에 대고 앞으로 기어간다(배밀이). 이미 네 발기기를 잘 하면 '잘 할 수 있다'로 표시하세요.", "https://i.ibb.co/pb1J9LX/image-21.png"),
+            new Question(2, "앉혀주면 손을 짚지 않고 안정하게 앉아 있는다.", "https://i.ibb.co/b6cygYY/image-18.png"),
             new Question(3, "누워 있다가 혼자 앉는다.", null),
-            new Question(4, "양손과 무릎으로 기어간다(네발기기).", null),
+            new Question(4, "양손과 무릎으로 기어간다(네발기기).", "https://i.ibb.co/7zD2cCn/image-19.png"),
             new Question(5, "가구를 붙잡고 일어선다.", null),
-            new Question(6, "가구를 붙잡은 상태에서 넘어지지 않고 자세를 낮춘다.", null),
-            new Question(7, "가구를 양손으로 붙잡고 옆으로 걷는다.", null),
+            new Question(6, "가구를 붙잡은 상태에서 넘어지지 않고 자세를 낮춘다.", "https://i.ibb.co/M5wvy7D/image-23.png"),
+            new Question(7, "가구를 양손으로 붙잡고 옆으로 걷는다.", "https://i.ibb.co/yP0ZZgn/image-24.png"),
             new Question(8, "가구나 벽에서 손을 떼고 5초 이상 혼자 서 있다.", null)
     )),
     FINE_MOTOR_SKILLS(List.of(
             new Question(1, "장난감을 손에 쥐어 주면 흔든다.", null),
-            new Question(2, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 감싸 쥔다.", null),
+            new Question(2, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 감싸 쥔다.", "https://i.ibb.co/PhH3tbQ/image-17.png"),
             new Question(3, "딸랑이를 쥐고 있는 손에 다른 장난감을 주면 쥐고 있던 딸랑이를 떨어뜨리고 새 장난감을 잡는다.", null),
             new Question(4, "두 개의 물건을 양손에 각각 따로 쥔다.", null),
-            new Question(5, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", null),
+            new Question(5, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", "https://i.ibb.co/VVG6rFB/image-22.png"),
             new Question(6, "장난감을 한 손에서 다른 손으로 옮겨 준다.", null),
             new Question(7, "손잡이를 사용하여 컵을 잡는다.", null),
             new Question(8, "우유병을 혼자서 잡고 먹는다.", null)

@@ -10,22 +10,22 @@ import java.util.List;
 public enum Step1SurveyQuestion {
     GROSS_MOTOR_SKILLS(List.of(
         new Question(1, "등을 대고 누운 자세에서 반쯤 뒤집는다.", null),
-        new Question(2, "엎드려 놓으면 고개를 잠깐 들었다 내린다.", null),
-        new Question(3, "누운 자세에서 두 팔을 잡고 앞으로 당길 때 목이 뒤로 처지지 않고 따라 올라온다.", null),
-        new Question(4, "엎드린 자세에서 가슴을 들고 양팔을 버틴다.", null),
+        new Question(2, "엎드려 놓으면 고개를 잠깐 들었다 내린다.", "https://i.ibb.co/Pzf5sTd/4-5-2.png"),
+        new Question(3, "누운 자세에서 두 팔을 잡고 앞으로 당길 때 목이 뒤로 처지지 않고 따라 올라온다.", "https://i.ibb.co/BV2NYCY/image-12.png"),
+        new Question(4, "엎드린 자세에서 가슴을 들고 양팔을 버틴다.", "https://i.ibb.co/WWD2y1c/image-13.png"),
         new Question(5, "엎드린 자세에서 뒤집는다.", null),
         new Question(6, "등을 대고 누운 자세에서 엎드린 자세로 뒤집는다(팔이 몸통에 걸려 있지 않아야 한다).", null),
-        new Question(7, "누워 있을 때 자기 발을 잡고 논다.", null),
-        new Question(8, "앉혀주면 양손을 짚고 30초 이상 혼자 버티고 앉아 있다.", null)
+        new Question(7, "누워 있을 때 자기 발을 잡고 논다.", "https://i.ibb.co/pxtWpDM/image-14.png"),
+        new Question(8, "앉혀주면 양손을 짚고 30초 이상 혼자 버티고 앉아 있다.", "https://i.ibb.co/BsC9VHr/image-15.png")
     )),
     FINE_MOTOR_SKILLS(List.of(
-            new Question(1, "등을 대고 누운 자세에서 두 손을 가슴 부근에 모은다.", null),
+            new Question(1, "등을 대고 누운 자세에서 두 손을 가슴 부근에 모은다.", "https://i.ibb.co/fQvgFMy/image-16.png"),
             new Question(2, "손에 딸랑이를 쥐어 주면 잠시 쥐고 있다.", null),
             new Question(3, "앉은 자세로 안겨있을 때 양손을 모아 치거나 손가락을 편다.", null),
             new Question(4, "손에 쥐고 있는 딸랑이를 자기 입으로 가져간다.", null),
             new Question(5, "딸랑이를 손 가까이 주면 잡는다.", null),
             new Question(6, "앉은 자세로 안겨있을 때 탁자 위의 장난감을 향해 손을 뻗는다.", null),
-            new Question(7, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 집는다.", null),
+            new Question(7, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 집는다.", "https://i.ibb.co/PhH3tbQ/image-17.png"),
             new Question(8, "딸랑이를 쥐고 있는 손에 다른 장난감을 주며 쥐고 있던 딸랑이를 떨어뜨리고 새 장난감을 잡는다.", null)
     )),
     COGNITION(List.of(
