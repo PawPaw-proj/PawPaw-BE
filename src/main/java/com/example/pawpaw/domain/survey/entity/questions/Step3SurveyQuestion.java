@@ -39,24 +39,24 @@ public enum Step3SurveyQuestion {
             new Question(8, "손에 닿지 않는 물건을 도구를 사용하여 가져온다.", null)
     )),
     LANGUAGE(List.of(
-            new Question(1, "완전한 문장으로 이야기한다.", null),
+            new Question(1, "완전한 문장으로 이야기한다.", "https://i.ibb.co/MDNYCF4/3-1.png"),
             new Question(2, "같은 문맥에서 두 개의 이상한 단어를 설명한다.", null),
-            new Question(3, "과거의 일을 자연스럽게 이야기한다.", null),
-            new Question(4, "현재와 미래를 구분하여 문장을 말한다.", null),
+            new Question(3, "과거의 일을 자연스럽게 이야기한다.", "https://i.ibb.co/1MyGXZH/3-3.png"),
+            new Question(4, "현재와 미래를 구분하여 문장을 말한다.", "https://i.ibb.co/ZJ3Vgrm/3-4.png"),
             new Question(5, "그날 있었던 일을 이야기한다.", null),
             new Question(6, "단어의 뜻을 물어보면 설명한다.", null),
-            new Question(7, "단순한 대화로 간단한 의사를 표현한다.", null),
-            new Question(8, "단어의 끝 부분을 말하여 질문의 의미를 파악한다.", null)
+            new Question(7, "단순한 대화로 간단한 의사를 표현한다.", "https://i.ibb.co/6rpZ93V/3-7.png"),
+            new Question(8, "단어의 끝 부분을 말하여 질문의 의미를 파악한다.", "https://i.ibb.co/QJY2kB1/3-8.png")
     )),
     SOCIAL_SKILLS(List.of(
             new Question(1, "다른 사람에게 간단한 놀이의 규칙을 설명한다.", null),
             new Question(2, "다른 아이들과 있을 때, 차례를 지키고 놀잖을 나눠서 논다.", null),
             new Question(3, "다른 아이들의 행동에 대해 이야기한다.", null),
             new Question(4, "'학교놀이', '슬레검' 등 여러가지 놀이를 한다.", null),
-            new Question(5, "자기보다 어린 아이들을 돌보는 행동을 한다.", null),
+            new Question(5, "자기보다 어린 아이들을 돌보는 행동을 한다.", "https://i.ibb.co/HtxjCGh/3-5.png"),
             new Question(6, "자기 차례를 기다린다.", null),
-            new Question(7, "도움이 필요한 친구를 도와준다.", null),
-            new Question(8, "다른 사람과 함께 이야기의 흐름에 맞추어 동작이나 놀이를 한다.", null)
+            new Question(7, "도움이 필요한 친구를 도와준다.", "https://i.ibb.co/b1mhg36/3-7.png"),
+            new Question(8, "다른 사람과 함께 이야기의 흐름에 맞추어 동작이나 놀이를 한다.", "https://i.ibb.co/zGHf1YM/3-8.png")
     )),
     SELF_CARE(List.of(
             new Question(1, "장화(부츠)를 혼자 신는다.", null),
@@ -65,7 +65,7 @@ public enum Step3SurveyQuestion {
             new Question(4, "단추를 끼운다.", null),
             new Question(5, "외투를 입는다.", null),
             new Question(6, "입술을 닦는다.", null),
-            new Question(7, "혼자서 스스로 머리를 감는다.", null),
+            new Question(7, "혼자서 스스로 머리를 감는다.", "https://i.ibb.co/FBNCbWx/3-7.png"),
             new Question(8, "식사를 다 한 후에는 정리한다.", null)
     ));
 

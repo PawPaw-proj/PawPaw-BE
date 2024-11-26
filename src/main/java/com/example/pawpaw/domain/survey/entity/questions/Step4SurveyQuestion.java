@@ -30,10 +30,10 @@ public enum Step4SurveyQuestion {
     )),
     COGNITION(List.of(
             new Question(1, "아침, 점심, 저녁, 오늘, 내일 등 시간을 이해한다.", null),
-            new Question(2, "손에 닿지 않는 물건을 도구를 사용하여 가져온다.", null),
-            new Question(3, "자신이 원하는 TV 채널로 돌린다.", null),
+            new Question(2, "손에 닿지 않는 물건을 도구를 사용하여 가져온다.", "https://i.ibb.co/RvFZDdJ/4-2.png"),
+            new Question(3, "자신이 원하는 TV 채널로 돌린다.", "https://i.ibb.co/ZYzFnGy/4-3.png"),
             new Question(4, "동화책을 읽어주면 내용을 일부 이해하고 기억한다.", null),
-            new Question(5, "엄마/보호자가 많이 쓰는 물건들이 어떤 용도로 사용되는지 알고 있다.", null),
+            new Question(5, "엄마/보호자가 많이 쓰는 물건들이 어떤 용도로 사용되는지 알고 있다.", "https://i.ibb.co/Qbv4rT9/4-5.png"),
             new Question(6, "1 더하기 2를 계산한다.", null),
             new Question(7, "자신의 왼쪽과 오른쪽을 구분할 수 있다.", null),
             new Question(8, "요일을 순서대로 알고 있다.", null)
@@ -41,8 +41,8 @@ public enum Step4SurveyQuestion {
     LANGUAGE(List.of(
             new Question(1, "그날 있었던 일을 이야기한다.", null),
             new Question(2, "친숙한 단어의 반대말을 말한다.", null),
-            new Question(3, "간단한 농담이나 빗대어서 하는 말의 뜻을 알아차린다.", null),
-            new Question(4, "단어의 뜻을 물어보면 설명한다.", null),
+            new Question(3, "간단한 농담이나 빗대어서 하는 말의 뜻을 알아차린다.", "https://i.ibb.co/QK2pR3r/4-3.png"),
+            new Question(4, "단어의 뜻을 물어보면 설명한다.", "https://i.ibb.co/wQc86KM/4-4.png"),
             new Question(5, "'만약~라면 무슨 일이 일어날까?' 같은 가상의 상황에 대해 상상력을 발휘한다.", null),
             new Question(6, "이름이나 쉬운 단어 2~3개를 보고 읽는다.", null),
             new Question(7, "가족이나 친구의 이름을 알고 있다.", null),

@@ -10,7 +10,7 @@ import java.util.List;
 public enum Step5SurveyQuestion {
     GROSS_MOTOR_SKILLS(List.of(
             new Question(1, "굴러가는 공을 발로 찬다.", null),
-            new Question(2, "2미터 거리에서 테니스공 크기의 공을 던지면 두 손으로 잡는다.", null),
+            new Question(2, "2미터 거리에서 테니스공 크기의 공을 던지면 두 손으로 잡는다.", "https://i.ibb.co/9ZvSvGB/5-2.png"),
             new Question(3, "공을 바닥에 한 번 튀길 수 있다.", null),
             new Question(4, "무릎 아래 높이로 매어져 있는 줄을 뛰어 넘을 수 있다.", null),
             new Question(5, "까끔발로 좌우 한발씩 번갈아 뛴다.", null),
@@ -19,7 +19,7 @@ public enum Step5SurveyQuestion {
             new Question(8, "굴러오는 공을 발로 찰 수 있다.", null)
     )),
     FINE_MOTOR_SKILLS(List.of(
-            new Question(1, "엄지손가락과 다른 네 손가락을 차례로 맞붙게 한다(반대편 네 손가락이 아니고 같은 손이어야 한다).", null),
+            new Question(1, "엄지손가락과 다른 네 손가락을 차례로 맞붙게 한다(반대편 네 손가락이 아니고 같은 손이어야 한다).", "https://i.ibb.co/KGtsBnp/5-1.png"),
             new Question(2, "삼각형이 그려진 것을 보여주면 삼각형을 그린다(그리는 과정의 시험을 보지 않고도 그려야 한다).", null),
             new Question(3, "종이에 그려진 동그라미를 가위로 오린다.", null),
             new Question(4, "간단한 자동차 모양을 흉내 내어 그린다.", null),

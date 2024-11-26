@@ -10,20 +10,20 @@ import java.util.List;
 public enum Step2SurveyQuestion {
     GROSS_MOTOR_SKILLS(List.of(
             new Question(1, "계단의 가장 낮은 층에서 양발을 모아 바닥으로 뛰어내린다.", null),
-            new Question(2, "서 있는 자세에서 팔을 들어 머리 위로 공을 앞으로 던진다.", null),
+            new Question(2, "서 있는 자세에서 팔을 들어 머리 위로 공을 앞으로 던진다.", "https://i.ibb.co/ypjdPyc/2-2.png"),
             new Question(3, "발뒤꿈치를 들어 네 걸음 이상 걷는다.", null),
-            new Question(4, "난간을 붙잡고 한 계단에 양발을 모은 뒤 한발씩 한발씩 계단을 올라간다.", null),
-            new Question(5, "아무것도 붙잡지 않고 한 발로 1초간 서 있다.", null),
-            new Question(6, "아무것도 붙잡지 않고 한 계단에 양발을 모은 뒤 한발씩 내려간다.", null),
-            new Question(7, "아무것도 붙잡지 않고 한발씩 번갈아 내딛으며 계단을 올라간다.", null),
-            new Question(8, "큰 공을 던져주면 양팔과 가슴을 이용해 받는다.", null)
+            new Question(4, "난간을 붙잡고 한 계단에 양발을 모은 뒤 한발씩 한발씩 계단을 올라간다.", "https://i.ibb.co/HrXBZdD/2-4.png"),
+            new Question(5, "아무것도 붙잡지 않고 한 발로 1초간 서 있다.", "https://i.ibb.co/2tH45bh/2-5.png"),
+            new Question(6, "아무것도 붙잡지 않고 한 계단에 양발을 모은 뒤 한발씩 내려간다.", "https://i.ibb.co/f2kSwj0/2-6.png"),
+            new Question(7, "아무것도 붙잡지 않고 한발씩 번갈아 내딛으며 계단을 올라간다.", "https://i.ibb.co/yXrzMqV/2-7.png"),
+            new Question(8, "큰 공을 던져주면 양팔과 가슴을 이용해 받는다.", "https://i.ibb.co/s5YHBxq/2-8.png")
     )),
     FINE_MOTOR_SKILLS(List.of(
             new Question(1, "문 손잡이를 돌려서 연다.", null),
             new Question(2, "(색)연필의 아랫부분을 잡는다.", null),
             new Question(3, "유아용 가위를 주면 실제로 종이를 자르지는 못해도 한 손으로 종이를 잡고 다른 손으로 가위를 벌리고 오므리며 종이를 자르려고 시도한다.", null),
-            new Question(4, "신발 끈 구멍이나 구슬 구멍에 끈을 끼운 후 빼낸다.", null),
-            new Question(5, "수평선 그리는 시범을 보여주면 흉내 내어 그린다.", null),
+            new Question(4, "신발 끈 구멍이나 구슬 구멍에 끈을 끼운 후 빼낸다.", "https://i.ibb.co/1GBnnby/2-4.png"),
+            new Question(5, "수평선 그리는 시범을 보여주면 흉내 내어 그린다.", "https://i.ibb.co/vsCRMv0/2-5.png"),
             new Question(6, "엄지와 다른 손가락으로 (색연필, 크레용 또는 펜 등을 잡는다).", null),
             new Question(7, "자신의 옷이나 인형 옷의 단추를 푼다.", null),
             new Question(8, "원의 그려진 것을 보여주면 원을 그리되 과정의 시범을 보지 않고도 그려야 한다.", null)
