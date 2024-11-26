@@ -8,7 +8,7 @@ import java.util.List;
 public record GameItemResponse(
     String gameName,
     String imageUrl,
-    List<String> developmentalEffects
+    String developmentalEffect
 ) {
     public static List<GameItemResponse> from(List<Game> games) {
         return games.stream()
