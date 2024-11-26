@@ -50,7 +50,7 @@ public class SurveyService {
         Child child = childRepository.findById(childId);
         List<SurveySection> sections = new ArrayList<>();
         List<Integer> surveyResponses = request.surveyResponses();
-        for (int categoryIdx = 0; categoryIdx < 5; categoryIdx++) {
+        for (int categoryIdx = 0; categoryIdx < SurveyCategory.values().length; categoryIdx++) {
             SurveyCategory category = SurveyCategory.values()[categoryIdx];
             List<Integer> categoryResponses = new ArrayList<>();
             for (int seq = 1; seq <= 8; seq++) {

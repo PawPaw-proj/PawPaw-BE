@@ -12,7 +12,8 @@ public enum SurveyCategory {
     FINE_MOTOR_SKILLS("소근육운동", "CTG-002"),
     COGNITION("인지", "CTG-003"),
     LANGUAGE("언어", "CTG-004"),
-    SOCIAL_SKILLS("사회성", "CTG-005");
+    SOCIAL_SKILLS("사회성", "CTG-005"),
+    SELF_CARE("자조", "CTG-006");
 
     private final String name;
     private final String code;

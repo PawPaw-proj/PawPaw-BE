@@ -8,65 +8,65 @@ import java.util.List;
 @Getter
 @RequiredArgsConstructor
 public enum Step2SurveyQuestion {
-
-    // 대근육운동
     GROSS_MOTOR_SKILLS(List.of(
-            new Question(1, "엎드린 자세에서 뒤집는다.", null),
-            new Question(2, "등을 대고 누운 자세에서 엎드린 자세로 뒤집는다(팔이 몸통에 걸려 있지 않아야 한다).", null),
-            new Question(3, "누워 있을 때 자기 발을 잡고 논다.", "https://i.ibb.co/pxtWpDM/image-14.png"),
-            new Question(4, "앉혀주면 양손을 짚고 30초 이상 혼자 버티고 앉아 있다.", "https://i.ibb.co/BsC9VHr/image-15.png"),
-            new Question(5, "배를 바닥에 대고 앞으로 긴다(배밀이). 이미 네 발기기를 잘 하면 '잘 할 수 있다'로 표기하세요.", "https://i.ibb.co/pb1J9LX/image-21.png"),
-            new Question(6, "앉혀주면 손을 짚지 않고 안정하게 앉아 있다.", "https://i.ibb.co/b6cygYY/image-18.png"),
-            new Question(7, "누워 있다가 혼자 앉는다.", null),
-            new Question(8, "양손과 무릎으로 긴다(네발기기).", "https://i.ibb.co/7zD2cCn/image-19.png")
+            new Question(1, "계단의 가장 낮은 층에서 양발을 모아 바닥으로 뛰어내린다.", null),
+            new Question(2, "서 있는 자세에서 팔을 들어 머리 위로 공을 앞으로 던진다.", null),
+            new Question(3, "발뒤꿈치를 들어 네 걸음 이상 걷는다.", null),
+            new Question(4, "난간을 붙잡고 한 계단에 양발을 모은 뒤 한발씩 한발씩 계단을 올라간다.", null),
+            new Question(5, "아무것도 붙잡지 않고 한 발로 1초간 서 있다.", null),
+            new Question(6, "아무것도 붙잡지 않고 한 계단에 양발을 모은 뒤 한발씩 내려간다.", null),
+            new Question(7, "아무것도 붙잡지 않고 한발씩 번갈아 내딛으며 계단을 올라간다.", null),
+            new Question(8, "큰 공을 던져주면 양팔과 가슴을 이용해 받는다.", null)
     )),
-
-    // 소근육운동
     FINE_MOTOR_SKILLS(List.of(
-            new Question(1, "앉은 자세로 안겨있을 때 양손을 모아 쥐거나 손가락을 만진다.", null),
-            new Question(2, "장난감을 손에 쥐어 주면 흔든다.", null),
-            new Question(3, "앉은 자세로 안겨있을 때 탁자 위의 장난감을 향해 손을 뻗는다(장난감이 실제로 손에 닿지 않아도 된다).", null),
-            new Question(4, "작은 장난감을 집어들 때, 손바닥에 대고 손가락으로 감싸 쥔다.", "https://i.ibb.co/PhH3tbQ/image-17.png"),
-            new Question(5, "딸랑이를 쥐고 있는 손에 다른 장난감을 주면 쥐고 있던 딸랑이를 떨어뜨리고 새 장난감을 잡는다.", null),
-            new Question(6, "손을 뻗어 앞에 있는 물체를 잡는다.", null),
-            new Question(7, "두 개의 물건을 양손에 각각 따로 쥔다.", null),
-            new Question(8, "엄지와 다른 손가락을 이용해 작은 과자를 집는다.", "https://i.ibb.co/VVG6rFB/image-22.png")
+            new Question(1, "문 손잡이를 돌려서 연다.", null),
+            new Question(2, "(색)연필의 아랫부분을 잡는다.", null),
+            new Question(3, "유아용 가위를 주면 실제로 종이를 자르지는 못해도 한 손으로 종이를 잡고 다른 손으로 가위를 벌리고 오므리며 종이를 자르려고 시도한다.", null),
+            new Question(4, "신발 끈 구멍이나 구슬 구멍에 끈을 끼운 후 빼낸다.", null),
+            new Question(5, "수평선 그리는 시범을 보여주면 흉내 내어 그린다.", null),
+            new Question(6, "엄지와 다른 손가락으로 (색연필, 크레용 또는 펜 등을 잡는다).", null),
+            new Question(7, "자신의 옷이나 인형 옷의 단추를 푼다.", null),
+            new Question(8, "원의 그려진 것을 보여주면 원을 그리되 과정의 시범을 보지 않고도 그려야 한다.", null)
     )),
-
-    // 인지
     COGNITION(List.of(
-            new Question(1, "어떤 소리를 듣고 있다가 새로운 소리가 들리면 거기로 관심을 돌린다.", null),
-            new Question(2, "자기 손과 손가락을 자세히 바라본다.", null),
-            new Question(3, "굴러가는 공을 따라서 계속 쳐다본다.", null),
-            new Question(4, "딸랑이나 손가락과 같은 물건을 바닥에 두드리면서 논다.", null),
-            new Question(5, "장난감이 떨어져 있는 곳을 쳐다본다.", null),
-            new Question(6, "친숙한 어른이 안으려고 하면 팔을 벌린다.", null),
-            new Question(7, "그림책에 재미있는 그림이 있으면 관심 있게 쳐다본다.", null),
-            new Question(8, "리듬에 맞추어 몸을 움직인다.", null)
+            new Question(1, "빨간, 노란, 파란 토막들을 섞어 놓으면 같은 색의 토막들끼리 분류한다.", null),
+            new Question(2, "'많다-적다'와 같은 양의 개념을 이해한다.", null),
+            new Question(3, "여섯 조각으로 된 퍼즐을 맞춘다.", null),
+            new Question(4, "두 개의 선 중 길이가 긴 것과 짧은 것을 구분한다.", null),
+            new Question(5, "'둘'이라는 개념을 이해한다.", null),
+            new Question(6, "크기가 다른 세 개의 사물을 놓고 '가장 큰 것', '중간 크기의 것', '가장 작은 것'을 구분한다.", null),
+            new Question(7, "'안', '밖', '사이'와 같은 공간에 대한 개념을 이해한다.", null),
+            new Question(8, "연관성이 없는 두 가지 지시사항을 기억하여 수행한다.", null)
     )),
-
-    // 언어
     LANGUAGE(List.of(
-            new Question(1, "'아', '우', '이' 등 의미 없는 발성을 한다.", null),
-            new Question(2, "아이를 어르거나 달래면 옹알이로 반응한다.", null),
-            new Question(3, "웃을 때 소리를 내며 웃는다.", null),
-            new Question(4, "두 입술을 떼어서 내는 투레질 소리(젖먹이가 하는 '뿌뿌' 같은 소리)를 낸다.", null),
-            new Question(5, "'멍', '뽕', '포', '모'와 비슷한 소리를 낸다.", null),
-            new Question(6, "'엄마' 또는 '아빠'와 비슷한 소리를 낸다(의미 없이 내는 소리도 포함된다).", null),
-            new Question(7, "아이에게 '어딨니?', '잡고', '하고 해봐' 짧은 소리만으로 하던 행동을 멈추고 목소리에 반응한다.", null),
-            new Question(8, "'무무', '바바바', '다다', '마마마' 등의 소리를 반복해서 발성한다.", null)
+            new Question(1, "손으로 가리키거나 동작으로 힌트를 주지 않아도, '식탁 위에 컵을 놓으세요.'라고 말하면 아이가 바르게 수행한다.", null),
+            new Question(2, "'앞에', '위에', '밑에', '뒤에' 중에서 두 가지 이상의 뜻을 이해한다.", null),
+            new Question(3, "그림책 속에 등장하는 사물의 이름을 말한다.", null),
+            new Question(4, "'이름이 뭐예요?'하고 물으면, 성과 이름을 모두 말한다.", null),
+            new Question(5, "'~했어요.', '~와' 같이 과거형으로 말한다.", null),
+            new Question(6, "간단한 대화를 주고받는다.", null),
+            new Question(7, "'예쁘다' 또는 '무섭다'의 뜻을 안다.", null),
+            new Question(8, "'할머니야', '할아버지', '오빠(형)', '누나(언니)', '동생'과 같은 호칭을 정확하게 사용한다.", null)
     )),
-
-    // 사회성
     SOCIAL_SKILLS(List.of(
-            new Question(1, "아이가 엄마(보호자)와 이야기를 하거나 놀 때 엄마(보호자)의 얼굴을 바라본다.", null),
-            new Question(2, "어른들의 얼굴(머리카락, 코, 안경 등)을 만져 보거나 잡아당긴다.", null),
-            new Question(3, "거울 속에 보이는 자신의 모습을 보고 웃거나 흥얼거린다.", null),
-            new Question(4, "아이의 이름을 부르면 듣고 쳐다본다.", null),
-            new Question(5, "가족 등 친숙한 사람을 보면 다가가려고 한다.", null),
-            new Question(6, "낯가림을 한다(모르는 얼굴이 보이면 놀선 사람처럼 멈추는 행동이 정상적으로 나타나며, 이것을 '낯가림'이라고 합니다.", null),
-            new Question(7, "친숙한 어른에게 안으라고 팔을 벌린다.", null),
-            new Question(8, "어른을 따라서 손뼉을 치며 짝짝짝 놀이를 한다.", null)
+            new Question(1, "어른이 시키면 '미안해.', '고마워.'라는 말을 한다.", null),
+            new Question(2, "다른 아이들의 행동을 보고 놀이의 규칙을 따른다.", null),
+            new Question(3, "자신의 기분을 좋다고, 나쁘다고 표현할 수 있다.", null),
+            new Question(4, "3~4명과 어울려서 숨바꼭질, 술래잡기 등을 한다.", null),
+            new Question(5, "어른이 이끄는 집단 놀이에서 규칙을 따른다.", null),
+            new Question(6, "자기 차례를 기다린다.", null),
+            new Question(7, "놀이 중에 도움이 필요한 친구를 도와주고 달래준다.", null),
+            new Question(8, "또래와 함께 이야기를 하며 흐름이 있는 놀이를 한다.", null)
+    )),
+    SELF_CARE(List.of(
+            new Question(1, "음식을 먹다 흘리면 손이나 옷으로 닦지 않고 스스로 휴지나 냅킨으로 닦는다.", null),
+            new Question(2, "바지를 입힐 때, 바지통에 발끝을 약간 넣어주면 허리까지 안전히 끌어 올린다.", null),
+            new Question(3, "낮 동안 소변을 가린다.", null),
+            new Question(4, "낮 동안 대변을 가린다.", null),
+            new Question(5, "물을 틀어주거나 받아주면 혼자서 바르고 손을 씻는다.", null),
+            new Question(6, "양말을 혼자서 신는다.", null),
+            new Question(7, "도와주지 않아도 혼자서 밥을 먹는다.", null),
+            new Question(8, "단추를 풀어 주면 스스로 내의로 벗는다.", null)
     ));
 
     private final List<Question> questions;
