@@ -31,7 +31,7 @@ public class SecurityConfig {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
                 .requestMatchers(
-                        "/login", "/logout", "/api/auth/**", "/v3/api-docs/**", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**", "/h2-console/**", "/api/surveys", "api/surveys/{surveyId}"
+                        "/login", "/logout", "/api/auth/**", "/v3/api-docs/**", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**", "/h2-console/**", "/api/surveys", "api/surveys/{surveyId}", "/api/games/{gameId}"
                 );
     }
 
