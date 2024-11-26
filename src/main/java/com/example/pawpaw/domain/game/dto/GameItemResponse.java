@@ -15,7 +15,7 @@ public record GameItemResponse(
                 .map(game -> new GameItemResponse(
                         game.getName(),
                         game.getImageUrl(),
-                        game.getDevelopmentalEffects().stream().map(SurveyCategory::getName).toList()
+                        game.getDevelopmentalEffect().name()
                 ))
                 .toList();
     }
