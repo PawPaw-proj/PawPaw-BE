@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -20,8 +18,7 @@ public class Game {
     private int id;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection
-    private List<SurveyCategory> developmentalEffects;
+    private SurveyCategory developmentalEffect;
 
     private String name;
     private String imageUrl;

@@ -1,16 +1,12 @@
 package com.example.pawpaw.domain.game.dto;
 
 import com.example.pawpaw.domain.game.entity.Game;
-import com.example.pawpaw.domain.survey.entity.SurveyCategory;
-
-import java.util.List;
-import java.util.Optional;
 
 public record GameDetailResponse(
     int id,
     String name,
     String imageUrl,
-    List<String> developmentalEffects,
+    String developmentalEffect,
     String description,
     String steps,
     String materials,
@@ -22,7 +18,7 @@ public record GameDetailResponse(
             game.getId(),
             game.getName(),
             game.getImageUrl(),
-            game.getDevelopmentalEffects().stream().map(SurveyCategory::getName).toList(),
+            game.getDevelopmentalEffect().getName(),
             game.getDescription(),
             game.getSteps(),
             game.getMaterials(),

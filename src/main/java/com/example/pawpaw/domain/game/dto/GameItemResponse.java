@@ -8,14 +8,14 @@ import java.util.List;
 public record GameItemResponse(
     String gameName,
     String imageUrl,
-    List<String> developmentalEffects
+    String developmentalEffect
 ) {
     public static List<GameItemResponse> from(List<Game> games) {
         return games.stream()
                 .map(game -> new GameItemResponse(
                         game.getName(),
                         game.getImageUrl(),
-                        game.getDevelopmentalEffects().stream().map(SurveyCategory::getName).toList()
+                        game.getDevelopmentalEffect().name()
                 ))
                 .toList();
     }
