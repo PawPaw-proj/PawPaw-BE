@@ -23,7 +23,9 @@ public enum ErrorCode {
     // 공통
     BAD_REQUEST_RESOURCE(HttpStatus.BAD_REQUEST, "잘못된 요청입니다."),
     NOT_FOUND_RESOURCE(HttpStatus.NOT_FOUND, "찾을 수 없는 리소스입니다."),
-    INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부 에러입니다.");
+    INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부 에러입니다."),
+    GPT_API_REQUEST(HttpStatus.INTERNAL_SERVER_ERROR, "GPT API 요청 중 에러가 발생했습니다."),
+    ;
 
     private final HttpStatus httpStatus;
     private final String message;

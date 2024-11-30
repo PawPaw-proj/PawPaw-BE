@@ -19,17 +19,10 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 public class AuthController {
 
     private final AuthService authService;
-    private final S3ImageService s3ImageService;
 
     @GetMapping("/test")
     public Response<Void> hello() {
         return Response.success();
-    }
-
-    @PostMapping(value = "/test2", consumes = {MULTIPART_FORM_DATA_VALUE})
-    public Response<String> uploadContractImage(@RequestPart MultipartFile image) {
-        String url = s3ImageService.upload("test", List.of(image)).get(0);
-        return Response.success(url);
     }
 
     @PostMapping("/login")

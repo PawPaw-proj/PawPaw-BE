@@ -58,4 +58,15 @@ public class ChildSurvey {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("해당 카테고리의 검사 내역을 찾을 수 없습니다: " + category));
     }
+
+    public List<SurveyCategory> getSurveyCategoriesToImprove(Survey survey) {
+        List<SurveyCategory> categoriesToImprove = new ArrayList<>();
+        for (SurveySection section : surveySections) {
+            int cutoffScore = survey.findCutoffScoreByCategory(section.getCategory());
+            if (section.isLowerThan(cutoffScore)) {
+                categoriesToImprove.add(section.getCategory());
+            }
+        }
+        return categoriesToImprove;
+    }
 }
