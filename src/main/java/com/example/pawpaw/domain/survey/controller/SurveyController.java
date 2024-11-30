@@ -1,12 +1,8 @@
 package com.example.pawpaw.domain.survey.controller;
 
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyListResponse;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyResponse;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveySectionResponse;
-import com.example.pawpaw.domain.survey.dto.response.SurveyResponse;
+import com.example.pawpaw.domain.survey.dto.SurveyResult;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
-import com.example.pawpaw.domain.survey.dto.response.ChildSurveyRegisterResponse;
-import com.example.pawpaw.domain.survey.dto.response.SurveyItemResponse;
+import com.example.pawpaw.domain.survey.dto.response.*;
 import com.example.pawpaw.domain.survey.service.SurveyService;
 import com.example.pawpaw.global.response.Response;
 import org.springframework.web.bind.annotation.*;
@@ -25,9 +21,9 @@ public class SurveyController {
 
     @PostMapping("/children/{childId}/surveys/{surveyId}")
     public Response<ChildSurveyRegisterResponse> addChildSurvey(
-        @PathVariable int childId,
-        @PathVariable int surveyId,
-        @RequestBody ChildSurveyRegisterRequest request
+            @PathVariable int childId,
+            @PathVariable int surveyId,
+            @RequestBody ChildSurveyRegisterRequest request
     ) {
         ChildSurveyRegisterResponse response = surveyService.registerSurvey(childId, surveyId, request);
         return Response.success(response);
@@ -59,10 +55,16 @@ public class SurveyController {
 
     @GetMapping("/childSurveys/{childSurveyId}/categories/{categoryCode}")
     public Response<ChildSurveySectionResponse> getChildSurveySection(
-        @PathVariable int childSurveyId,
-        @PathVariable String categoryCode
+            @PathVariable int childSurveyId,
+            @PathVariable String categoryCode
     ) {
         ChildSurveySectionResponse response = surveyService.getChildSurveySection(childSurveyId, categoryCode);
         return Response.success(response);
+    }
+
+    @GetMapping("/children/{childSurveyId}/averages")
+    public Response<SurveyResult> getSurveyAverages(@PathVariable int childSurveyId) {
+        SurveyResult surveyResult = surveyService.getSurveyAverages(childSurveyId);
+        return Response.success(surveyResult);
     }
 }
