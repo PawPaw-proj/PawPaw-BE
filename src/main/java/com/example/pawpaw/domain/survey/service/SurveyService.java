@@ -5,13 +5,17 @@ import com.example.pawpaw.domain.child.entity.Child;
 import com.example.pawpaw.domain.child.repository.ChildRepository;
 import com.example.pawpaw.domain.survey.dto.request.ChildSurveyRegisterRequest;
 import com.example.pawpaw.domain.survey.dto.response.*;
-import com.example.pawpaw.domain.survey.entity.*;
+import com.example.pawpaw.domain.survey.entity.ChildSurvey;
+import com.example.pawpaw.domain.survey.entity.Survey;
+import com.example.pawpaw.domain.survey.entity.SurveyCategory;
+import com.example.pawpaw.domain.survey.entity.SurveySection;
 import com.example.pawpaw.domain.survey.repository.ChildSurveyRepository;
-import com.example.pawpaw.domain.survey.repository.SurveySectionRepository;
+import com.example.pawpaw.domain.survey.service.event.ChildSurveyRegisteredEvent;
 import com.example.pawpaw.global.response.CustomException;
 import com.example.pawpaw.global.response.ErrorCode;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -26,8 +30,8 @@ public class SurveyService {
 
     private final ChildRepository childRepository;
     private final ChildSurveyRepository childSurveyRepository;
-    private final SurveySectionRepository surveySectionRepository;
     private final AuthService authService;
+    private final ApplicationEventPublisher eventPublisher;
 
     public List<SurveyItemResponse> getSurveys() {
         return Stream.of(Survey.values())
@@ -62,6 +66,7 @@ public class SurveyService {
         }
 
         ChildSurvey childSurvey = childSurveyRepository.save(new ChildSurvey(child, surveyId, LocalDate.now(), child.calculateAgeMonths(), sections));
+        eventPublisher.publishEvent(new ChildSurveyRegisteredEvent(surveyId, surveyResponses));
         return new ChildSurveyRegisterResponse(childSurvey.getId());
     }
 
