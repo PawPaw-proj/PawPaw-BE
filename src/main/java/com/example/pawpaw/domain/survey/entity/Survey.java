@@ -161,4 +161,8 @@ public enum Survey {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 OldSurvey Id입니다.: " + id));
     }
+
+    public int findCutoffScoreByCategory(SurveyCategory category) {
+        return scoreThresholds.get(category).get("다");
+    }
 }

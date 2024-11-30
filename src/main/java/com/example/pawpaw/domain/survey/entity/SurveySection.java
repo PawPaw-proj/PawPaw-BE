@@ -33,4 +33,8 @@ public class SurveySection {
                 .mapToInt(Integer::intValue)
                 .sum();
     }
+
+    public boolean isLowerThan(int cutoffScore) {
+        return calculateTotalScore() < cutoffScore;
+    }
 }
