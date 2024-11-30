@@ -13,7 +13,8 @@ public enum SurveyCategory {
     COGNITION("인지", "CTG-003"),
     LANGUAGE("언어", "CTG-004"),
     SOCIAL_SKILLS("사회성", "CTG-005"),
-    SELF_CARE("자조", "CTG-006");
+//    SELF_CARE("자조", "CTG-006");
+    ;
 
     private final String name;
     private final String code;
