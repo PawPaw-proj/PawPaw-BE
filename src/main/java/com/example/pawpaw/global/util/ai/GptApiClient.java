@@ -71,13 +71,14 @@ public class GptApiClient {
                 33, "치카치카 양치해요(치카치카 양치하기)", "SELF_CARE"
                 
                 Input:
-                - Area the child needs to improve: [e.g., "COGNITION", "GROSS_MOTOR_SKILLS"]
+                - A prioritized list of developmental areas the child needs to improve: [e.g., "COGNITION", "GROSS_MOTOR_SKILLS"]
                 
                 Your task:
                 - Recommend a **maximum of 5 play activities** that match each developmental area the child needs to improve.
+                - Prioritize the recommendations based on the order of developmental areas provided. For example, recommend activities that match the first area before considering activities from the second area, and so on.
                 - Include both the `id`, `name`, and `developmentalEffect` for each recommended play activity in JSON format.
                 - (**IMPORTANT**) Format your response **strictly in JSON** and do not include any additional text, commentary, or explanation outside the JSON block.
-                - (**IMPORTANT**) If there are more than 5 possible matches, **select only the first 5 activities** based on their order in the provided list.
+                - (**IMPORTANT**) If there are more than 5 possible matches for a developmental area, **select only the first 5 activities** based on their order in the provided list.
                 - The response must follow this format:
                 
                 Output format:
@@ -106,9 +107,9 @@ public class GptApiClient {
                 .map(Enum::name)
                 .collect(Collectors.joining(", "));
         String userMessage = String.format("""
-                The child needs to improve in the following developmental areas: [%s].
-                
-                Please recommend suitable play activities and respond **only with JSON** in the specified format.
+                The child needs to improve in the following prioritized developmental areas: [%s].
+
+                Please recommend up to a total of 5 suitable play activities, prioritizing the developmental areas provided in order. Respond **only with JSON** in the specified format.
                 """, categoriesToImprove);
         String jsonRequest = createRequestJson(userMessage);
 

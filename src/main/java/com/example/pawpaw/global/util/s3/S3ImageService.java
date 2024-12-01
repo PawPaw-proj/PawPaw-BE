@@ -79,7 +79,7 @@ public class S3ImageService {
 
         // S3에서 CSV 파일 다운로드
         String key = RAW_DATA_DIRECTORY + "/result/4-5months/" + csvFileName;
-        log.error("Reading key: " + key);
+        log.info("Reading key: " + key);
 
         List<SurveyAverageData> results = new ArrayList<>();
 
