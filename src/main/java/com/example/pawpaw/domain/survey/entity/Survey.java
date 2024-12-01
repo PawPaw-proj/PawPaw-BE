@@ -80,72 +80,72 @@ public enum Survey {
         put(LANGUAGE, Step2SurveyQuestion.LANGUAGE.getQuestions());
         put(SOCIAL_SKILLS, Step2SurveyQuestion.SOCIAL_SKILLS.getQuestions());
     }}),
-//    SURVEY3(3, "발달선별검사 3차", 8, 9, new LinkedHashMap<>() {{
-//        put(GROSS_MOTOR_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 5);
-//            put("나", 15);
-//            put("다", 24);
-//        }});
-//        put(FINE_MOTOR_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 16);
-//            put("나", 20);
-//            put("다", 24);
-//        }});
-//        put(COGNITION, new LinkedHashMap<>() {{
-//            put("가", 15);
-//            put("나", 19);
-//            put("다", 24);
-//        }});
-//        put(LANGUAGE, new LinkedHashMap<>() {{
-//            put("가", 10);
-//            put("나", 15);
-//            put("다", 23);
-//        }});
-//        put(SOCIAL_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 14);
-//            put("나", 18);
-//            put("다", 23);
-//        }});
-//    }}, new LinkedHashMap<>() {{
-//        put(GROSS_MOTOR_SKILLS, Step3SurveyQuestion.GROSS_MOTOR_SKILLS.getQuestions());
-//        put(FINE_MOTOR_SKILLS, Step3SurveyQuestion.FINE_MOTOR_SKILLS.getQuestions());
-//        put(COGNITION, Step3SurveyQuestion.COGNITION.getQuestions());
-//        put(LANGUAGE, Step3SurveyQuestion.LANGUAGE.getQuestions());
-//        put(SOCIAL_SKILLS, Step3SurveyQuestion.SOCIAL_SKILLS.getQuestions());
-//    }}),
-//    SURVEY4(4, "발달선별검사 4차", 10, 11, new LinkedHashMap<>() {{
-//        put(GROSS_MOTOR_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 10);
-//            put("나", 18);
-//            put("다", 24);
-//        }});
-//        put(FINE_MOTOR_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 16);
-//            put("나", 20);
-//            put("다", 24);
-//        }});
-//        put(COGNITION, new LinkedHashMap<>() {{
-//            put("가", 17);
-//            put("나", 20);
-//            put("다", 24);
-//        }});
-//        put(LANGUAGE, new LinkedHashMap<>() {{
-//            put("가", 11);
-//            put("나", 17);
-//            put("다", 23);
-//        }});
-//        put(SOCIAL_SKILLS, new LinkedHashMap<>() {{
-//            put("가", 12);
-//            put("나", 17);
-//            put("다", 23);
-//        }});
-//    }}, new LinkedHashMap<>() {{
-//        put(GROSS_MOTOR_SKILLS, Step4SurveyQuestion.GROSS_MOTOR_SKILLS.getQuestions());
-//        put(FINE_MOTOR_SKILLS, Step4SurveyQuestion.FINE_MOTOR_SKILLS.getQuestions());
-//        put(COGNITION, Step4SurveyQuestion.COGNITION.getQuestions());
-//        put(LANGUAGE, Step4SurveyQuestion.LANGUAGE.getQuestions());
-//        put(SOCIAL_SKILLS, Step4SurveyQuestion.SOCIAL_SKILLS.getQuestions());
-//    }})
+    SURVEY3(3, "발달선별검사 3차", 8, 9, new LinkedHashMap<>() {{
+        put(GROSS_MOTOR_SKILLS, new LinkedHashMap<>() {{
+            put("가", 5);
+            put("나", 15);
+            put("다", 24);
+        }});
+        put(FINE_MOTOR_SKILLS, new LinkedHashMap<>() {{
+            put("가", 16);
+            put("나", 20);
+            put("다", 24);
+        }});
+        put(COGNITION, new LinkedHashMap<>() {{
+            put("가", 15);
+            put("나", 19);
+            put("다", 24);
+        }});
+        put(LANGUAGE, new LinkedHashMap<>() {{
+            put("가", 10);
+            put("나", 15);
+            put("다", 23);
+        }});
+        put(SOCIAL_SKILLS, new LinkedHashMap<>() {{
+            put("가", 14);
+            put("나", 18);
+            put("다", 23);
+        }});
+    }}, new LinkedHashMap<>() {{
+        put(GROSS_MOTOR_SKILLS, Step3SurveyQuestion.GROSS_MOTOR_SKILLS.getQuestions());
+        put(FINE_MOTOR_SKILLS, Step3SurveyQuestion.FINE_MOTOR_SKILLS.getQuestions());
+        put(COGNITION, Step3SurveyQuestion.COGNITION.getQuestions());
+        put(LANGUAGE, Step3SurveyQuestion.LANGUAGE.getQuestions());
+        put(SOCIAL_SKILLS, Step3SurveyQuestion.SOCIAL_SKILLS.getQuestions());
+    }}),
+    SURVEY4(4, "발달선별검사 4차", 10, 11, new LinkedHashMap<>() {{
+        put(GROSS_MOTOR_SKILLS, new LinkedHashMap<>() {{
+            put("가", 10);
+            put("나", 18);
+            put("다", 24);
+        }});
+        put(FINE_MOTOR_SKILLS, new LinkedHashMap<>() {{
+            put("가", 16);
+            put("나", 20);
+            put("다", 24);
+        }});
+        put(COGNITION, new LinkedHashMap<>() {{
+            put("가", 17);
+            put("나", 20);
+            put("다", 24);
+        }});
+        put(LANGUAGE, new LinkedHashMap<>() {{
+            put("가", 11);
+            put("나", 17);
+            put("다", 23);
+        }});
+        put(SOCIAL_SKILLS, new LinkedHashMap<>() {{
+            put("가", 12);
+            put("나", 17);
+            put("다", 23);
+        }});
+    }}, new LinkedHashMap<>() {{
+        put(GROSS_MOTOR_SKILLS, Step4SurveyQuestion.GROSS_MOTOR_SKILLS.getQuestions());
+        put(FINE_MOTOR_SKILLS, Step4SurveyQuestion.FINE_MOTOR_SKILLS.getQuestions());
+        put(COGNITION, Step4SurveyQuestion.COGNITION.getQuestions());
+        put(LANGUAGE, Step4SurveyQuestion.LANGUAGE.getQuestions());
+        put(SOCIAL_SKILLS, Step4SurveyQuestion.SOCIAL_SKILLS.getQuestions());
+    }})
     ;
 
     private final int id;
