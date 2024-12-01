@@ -54,6 +54,9 @@ dependencies {
 
 	// H2
 	runtimeOnly 'com.h2database:h2'
+
+	// apache commons csv
+	implementation 'org.apache.commons:commons-csv:1.10.0'
 }
 
 tasks.named('test') {
