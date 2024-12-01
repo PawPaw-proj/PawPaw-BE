@@ -1,7 +1,7 @@
 package com.example.pawpaw.domain.survey.dto.response;
 
-import com.example.pawpaw.domain.survey.entity.Survey;
 import com.example.pawpaw.domain.survey.entity.SurveyCategory;
+import com.example.pawpaw.domain.survey.entity.Survey;
 import com.example.pawpaw.domain.survey.entity.questions.Question;
 
 import java.util.ArrayList;

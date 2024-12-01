@@ -24,6 +24,7 @@ public class Game {
     private String imageUrl;
     private String description;
     private String steps;
+    private String effects;
     private String materials;
     private int minAgeMonths;
     private int maxAgeMonths;

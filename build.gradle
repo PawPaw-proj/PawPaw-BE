@@ -44,6 +44,8 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -52,6 +54,9 @@ dependencies {
 
 	// H2
 	runtimeOnly 'com.h2database:h2'
+
+	// apache commons csv
+	implementation 'org.apache.commons:commons-csv:1.10.0'
 }
 
 tasks.named('test') {
