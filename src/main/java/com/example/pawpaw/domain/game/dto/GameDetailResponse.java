@@ -10,6 +10,7 @@ public record GameDetailResponse(
     String description,
     String steps,
     String materials,
+    String effects,
     int minAgeMonths,
     int maxAgeMonths
 ) {
@@ -22,6 +23,7 @@ public record GameDetailResponse(
             game.getDescription(),
             game.getSteps(),
             game.getMaterials(),
+            game.getEffects(),
             game.getMinAgeMonths(),
             game.getMaxAgeMonths()
         );
